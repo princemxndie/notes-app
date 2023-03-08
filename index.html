@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Note-ted</title>
+    <link rel="stylesheet" href="OpenUI.1.0/css/root/public/public.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f66ed11236.js" crossorigin="anonymous"></script>
+  </head>
+  
+  <body class="--bg-dark-alt --font-family-sans-serif --font-poppins --c-light-alt">
+    <div class="--container-fixed-vertical-overflow-scrolling-type">
+            
+      <div class="--container-grid-type">
+        <form class="--container-free-type --padding-xs">
+          <div class="--container-flexbox-type --jf-space-bw --padding-3xs --margin-bottom-sm">
+            <a class="--display-flex --jf-center --c-yellow-alt --font-size-2sm --font-weight-600 --saved-notes-btn">
+              <span class="--font-weight-900 --font-size-2sm fas fa-angle-left"></span>&nbsp;Notes
+            </a>
+            <button class="--bg-none --c-yellow-alt --font-size-2sm --font-weight-600 --border-0" type="button" id="save-note">Done</button>
+          </div>
+            <input class="--width-fxl --padding-left-right-xs --bg-none --c-inherit --font-size-3md --font-weight-900 --border-0 --margin-bottom-4sm" type="text" id="note-title">
+            <textarea class="--width-fxl --padding-left-right-4sm --bg-none --c-inherit --font-size-3sm --border-0" id="note-body" rows="20"></textarea>
+        </form>
+        
+        <nav class="--navbar-horizontal-type --position-fixed --bg-blur-sm --padding-4sm --bottom-0 --z-index-6">
+          <p class="--font-size-4sm --font-weight-800"><span class="--note-count"></span>&nbsp;Note<span class="--add-s"></span></p>
+          <a class="--display-flex --jf-center --c-inherit --create-note-btn"></a>
+        </nav>
+        
+        <section class="--container-free-type --bg-dark-alt --height-fxl --position-fixed --overflow-x-auto --slide-in-from-right --saved-notes">
+          <div class="--container-free-type --padding-4sm">
+            <h1 class="--font-size-3md --font-weight-800 --margin-bottom-2xs">Notes</h1>
+            <div class="--position-relative">
+              <label class="--position-absolute --left-xs" for="search-bar" style="top:15%;"><span class="fas fa-search"></span></label>
+              <input class="--width-fxl --bg-shader-1x --c-inherit --border-radius-sm --border-0 --font-size-3sm" type="search" 
+              name="search-bar" id="search-bar" placeholder="Search" style="padding:5px 10px 5px 10%;">
+            </div>
+          </div>
+          
+          <div class="--container-free-type --padding-3sm --margin-bottom-f2md">
+            <ul class="--list-type-none --bg-shader-1x --border-radius-sm --line-height-sm --padding-left-right-sm" id="note-list"></ul>
+          </div>
+        </section>
+      </div>
+      
+    </div>
+    
+    <script src="main.js"></script>
+  </body>
+</html>
